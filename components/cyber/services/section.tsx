@@ -5,7 +5,7 @@ interface ServicesProps {
   sectionName: string;
   title: string;
   description: string;
-  imageSrc: string;
+  imageSrc: any;
   imageAlt: string;
   buttonText: string;
   reverse?: boolean;
