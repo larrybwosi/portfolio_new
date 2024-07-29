@@ -1,3 +1,4 @@
+import ContactForm from "@/components/cyber/contact";
 import Landing from "@/components/cyber/Landing";
 import CyberNavbar from "@/components/cyber/navbar";
 import ServicesPage from "@/components/cyber/services/page";
@@ -10,6 +11,7 @@ export default function Cyber() {
       <CyberNavbar />
       <Landing/>
       <ServicesPage/>
+      <ContactForm/>
     </main>
   )
 }
