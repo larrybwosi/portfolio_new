@@ -9,6 +9,7 @@ const servicesData = [
     imageSrc: tripguide,
     imageAlt: "Person overlooking misty mountains",
     buttonText: "Contact Us",
+    imagePosition: "left",
     reverse: false,
   },
   {
@@ -38,6 +39,7 @@ export default function ServicesPage() {
   return (
     <section>
       {servicesData.map((serviceProps, index) => (
+        // @ts-ignore
         <Services key={index} {...serviceProps} />
       ))}
     </section>
