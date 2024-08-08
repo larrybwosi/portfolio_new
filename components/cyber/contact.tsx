@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { MotionButton, MotionDiv } from '../motion';
+import { constactInfo } from './content';
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -64,8 +65,8 @@ const ContactForm: React.FC = () => {
         className="w-full lg:w-1/2 p-8"
         variants={itemVariants}
       >
-        <h2 className="text-3xl font-bold mb-4 text-gray-800">We'd love to help</h2>
-        <p className="text-gray-600 mb-8">We're a full service agency with experts ready to help. We'll get in touch within 24 hours.</p>
+        <h2 className="text-3xl font-bold mb-4 text-gray-800">{constactInfo[0].title}</h2>
+        <p className="text-gray-600 mb-8">{constactInfo[0].p}</p>
         
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="flex flex-col sm:flex-row gap-4">
@@ -174,9 +175,9 @@ const ContactForm: React.FC = () => {
               </svg>
             ))}
           </div>
-          <p className="text-sm mb-4 italic">"Untitled UI is the real deal. We've worked with a dozen agencies that simply don't deliver. Working with experienced and knowledgeable professionals at the helm is a breath of fresh air."</p>
+          <p className="text-sm mb-4 italic">{constactInfo[1].description}</p>
           <p className="font-bold">Ellie Simpson</p>
-          <p className="text-sm text-gray-300">Head of Design, Sisyphus Labs</p>
+          <p className="text-sm text-gray-300">{constactInfo[1].label}</p>
         </div>
         <div className="flex justify-between">
           <button className="text-white hover:text-gray-300 transition duration-300">&larr;</button>

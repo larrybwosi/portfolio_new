@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { MotionButton, MotionDiv, MotionH1, MotionLi, MotionP, MotionSection, MotionUl } from "../motion";
+import { landingData, landingDataItems } from "./content";
 
 export default function Landing() {
   return (
@@ -18,7 +19,7 @@ export default function Landing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Experience the Future of Digital Connectivity
+          {landingData[0].title}
         </MotionH1>
         <MotionP 
           className="text-lg md:text-xl text-white mb-8"
@@ -26,7 +27,7 @@ export default function Landing() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          At [Company Name] Cyber Cafe, we offer:
+          {landingData[2].title}
         </MotionP>
         <MotionUl 
           className="list-none text-white mb-8 space-y-4"
@@ -34,13 +35,7 @@ export default function Landing() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          {[
-            "High-speed internet access for seamless browsing",
-            "State-of-the-art computer systems with latest software",
-            "Comfortable workspaces designed for productivity",
-            "Printing, scanning, and other business services",
-            "Expert tech support to assist with any issues"
-          ].map((item, index) => (
+          {landingDataItems.map((item, index) => (
             <MotionLi 
               key={index}
               className="flex items-center space-x-2"
